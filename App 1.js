@@ -1,20 +1,20 @@
 import React from 'react';
-import { View, Text, Touchable, TouchableOpacity } from 'react-native';
+import {View, Text, Touchable, TouchableOpacity} from 'react-native';
 import Background from './Background';
 import Btn from './Btn';
-import { darkGreen } from './Constants';
+import {darkGreen} from './Constants';
 import Field from './Field';
 
-const Signup = (props) => {
+const Signup = props => {
   return (
     <Background>
-      <View style={{ alignItems: 'center', width: 460 }}>
+      <View style={{alignItems: 'center', width: 460}}>
         <Text
           style={{
             color: 'white',
             fontSize: 54,
             fontWeight: 'bold',
-            marginTop: 20,
+            marginTop: 25,
           }}>
           Register
         </Text>
@@ -44,33 +44,27 @@ const Signup = (props) => {
               display: 'flex',
               flexDirection: 'row',
               width: '78%',
-              paddingRight: 10,
+              paddingRight: 10
             }}>
-            <Text style={{ color: 'grey', fontSize: 16 }}></Text>
-            <Text
-              style={{
-                color: darkGreen,
-                fontWeight: 'bold',
-                fontSize: 16,
-              }}></Text>
+            <Text style={{color: 'grey', fontSize: 16}}>
+            </Text>
+            <Text style={{color: darkGreen, fontWeight: 'bold', fontSize: 16}}>
+            </Text>
           </View>
 
           <View
             style={{
               display: 'flex',
               flexDirection: 'row',
-              justifyContent: 'center',
+              justifyContent :"center",
               width: '78%',
               paddingRight: 16,
-              marginBottom: 10,
+              marginBottom: 10
             }}>
-            <Text style={{ color: 'grey', fontSize: 16 }}></Text>
-            <Text
-              style={{
-                color: darkGreen,
-                fontWeight: 'bold',
-                fontSize: 16,
-              }}></Text>
+            <Text style={{color: 'grey', fontSize: 16}}>
+            </Text>
+            <Text style={{color: darkGreen, fontWeight: 'bold', fontSize: 16}}>
+            </Text>
           </View>
           <Btn
             textColor="white"
@@ -78,6 +72,7 @@ const Signup = (props) => {
             btnLabel="Signup"
             Press={() => {
               alert('Account created');
+              
             }}
           />
           <View
@@ -86,12 +81,13 @@ const Signup = (props) => {
               flexDirection: 'row',
               justifyContent: 'center',
             }}>
-            <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
+            <Text style={{fontSize: 16, fontWeight: 'bold'}}>
               Already have an account ?{' '}
             </Text>
-            <TouchableOpacity>
+            <TouchableOpacity
+              >
               <Text
-                style={{ color: darkGreen, fontWeight: 'bold', fontSize: 16 }}>
+                style={{color: darkGreen, fontWeight: 'bold', fontSize: 16}}>
                 Login
               </Text>
             </TouchableOpacity>
