@@ -6,7 +6,7 @@ export default function LoginScreen({ navigation }) {
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-   
+        navigation.navigate('Dashboard');
     };
 
     const handleRegister = () => {
@@ -32,7 +32,7 @@ export default function LoginScreen({ navigation }) {
             />
             <Button title="Login" onPress={handleLogin} />
             <View style={{ marginTop: 10 }}></View>
-            <Button title="Click Here To Register" onPress={handleRegister} />
+            <Button title="Register?" onPress={handleRegister} />
         </View>
     );
 }
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    
     loginTitle: {
         fontSize: 24,
         marginBottom: 20,

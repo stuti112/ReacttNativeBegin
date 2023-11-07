@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, StatusBar } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import LoginScreen from './LoginScreen';
-import RegisterScreen from './RegisterScreen'; 
-export default function App() {
-  const [showLogin, setShowLogin] = useState(true); // Set the initial state to show the login screen
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Dashboard from './Dashboard';
 
+
+
+export default function App() {
+  const Stack = createNativeStackNavigator();
+  
   return (
-    <View style={styles.container}>
-      {showLogin ? (
-        <LoginScreen onLogin={() => setShowLogin(false)} />
-      ) : (
-        <RegisterScreen onRegister={() => setShowLogin(true)} />
-      )}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='LoginScreen'>
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="Dashboard" component={Dashboard} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
